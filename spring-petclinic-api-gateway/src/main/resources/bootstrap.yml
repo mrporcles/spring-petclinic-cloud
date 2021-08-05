@@ -6,6 +6,13 @@ spring:
     name: api-gateway
 #this is a bug that needs to be resolved
 management:
+  endpoint:
+    restart:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: restart
   metrics:
     export:
       wavefront:
